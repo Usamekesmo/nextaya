@@ -352,8 +352,8 @@ const sheetURLs = {
   corrections: 'https://sheet.best/api/sheets/2fb79a9a-4f21-483d-9446-3f0dc5fe9c7c/tabs/corrections'
 };
 
-const TIME_PER_QUESTION = 60;
-const MAX_QUESTIONS = 25;
+const TIME_PER_QUESTION = 25;
+const MAX_QUESTIONS = 50;
 const TOTAL_SCORE = 100;
 
 let questions = [];
@@ -464,7 +464,7 @@ ${selectedSurah && selectedSurah !== "__all__" ? `📖 <b>السورة:</b> ${se
     detailedReport += `
 📢 <b>ملاحظة:</b>
 يمكنك مراجعة الأخطاء وتحسين أدائك في المرة القادمة.
-شارك الاختبار مع أصدقائك: https://usamekesmo.github.io/Qurantest/
+شارك الاختبار مع أصدقائك 
 `;
 
     await sendTelegramMessage(detailedReport, TELEGRAM_SECOND_CHANNEL_ID);
