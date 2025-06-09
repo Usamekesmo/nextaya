@@ -449,11 +449,11 @@ ${selectedSurah && selectedSurah !== "__all__" ? `📖 <b>السورة:</b> ${se
     corrections.forEach((correction, index) => {
       detailedReport += `
 🔹 <b>السؤال ${index + 1}:</b> 
-﴿${correction.question}﴾
+﴾${correction.question}﴿
 ✖ <b>إجابتك:</b> 
-﴿${correction.userAnswer}﴾
+﴾${correction.userAnswer}﴿
 ✔ <b>الإجابة الصحيحة:</b> 
-﴿${correction.correctAnswer}﴾
+﴾${correction.correctAnswer}﴿
 ━━━━━━━━━━━━━━
 `;
     });
@@ -666,7 +666,8 @@ function checkNextAnswer(selectedAnswer, correctAnswer, button) {
     document.getElementById("feedback").innerText = `❌ الإجابة الصحيحة: ${correctAnswer}`;
     document.getElementById("feedback").className = "answer-feedback wrong";
     corrections.push({
-      question: `ما هي الآية التالية لـ: ${questions[currentIndex].ayanext}`,
+      question: `ما هي الآية التالية لـ: 
+      ${questions[currentIndex].ayanext}`,
       userAnswer: selectedAnswer,
       correctAnswer: correctAnswer
     });
