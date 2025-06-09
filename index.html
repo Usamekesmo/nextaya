@@ -669,7 +669,8 @@ function checkNextAnswer(selectedAnswer, correctAnswer, button) {
     document.getElementById("feedback").innerText = `❌ الإجابة الصحيحة: ${correctAnswer}`;
     document.getElementById("feedback").className = "answer-feedback wrong";
     corrections.push({
-      question: `ما هي الآية التالية لـ: 
+      question: `ما هي الآية التالية لـ:
+      
      ۝ ${questions[currentIndex].ayanext} ۝`,
       userAnswer: selectedAnswer,
       correctAnswer: correctAnswer
